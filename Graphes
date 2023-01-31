@@ -65,5 +65,8 @@ n=1 : f = k*1
 n=2 : l'une des feuilles est remplacée par un noeud interne et k feuilles en dessous : k-1 + k = f
 n=3 : pareil : k-1 + k-1 + k = f 
 on peut donc prévoir une formule du style f = k + (n-1)*(k-1) = = n*(k-1) +1 (on remarque que ça fonctionne bien pour k = 2)
+Preuve : on compte de deux façons le nombre d'arrêtes , une fois par le nombre de noeuds qui sont extrémité gauche (n*k), une fois par le nombre d'arrêtes extrémité droite (n +f -1)
+
+
 
 
