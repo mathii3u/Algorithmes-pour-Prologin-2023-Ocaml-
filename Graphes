@@ -32,4 +32,4 @@ let rec build sous_arbre_gauche pile =
 | pop pile = Noeud -> sous_arbre_droit = build Vide liste' 
                       build N(Noeud,sous_arbre_gauche, sous_arbre_droit) pile 
 
-               (* il faut bien comprendre que la pile à été modifiée par les appels réccursifs, elle est mutable *) 
+Rq : il faut bien comprendre que la pile à été modifiée par les appels réccursifs
