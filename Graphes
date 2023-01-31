@@ -1,1 +1,35 @@
+I) Arbres 
 
+1) Généralités 
+
+1.1) Méthode :
+Une bonne idée est souvent de renvoyer a l'aide d'une fonction auxilière une partie des calculs fait réccursivement sur les enfants d'un noeud 
+Applications : exo1 
+
+
+Exercices :
+
+Exo1 : Anoter les noeuds d'un arbre binaire par la taille du sous arbre dont ils sont la racine 
+Solution : Nos enfants se renvoient anotés et renvoient leur taille, ce qui permet de nous anoter nous même et de renvoyer notre taille
+
+
+Exo2 : Donner la liste des étiquettes d'un arbre binaire dans l'ordre préfixe 
+Solution : pour éviter d'avoir à concaténer des liste on a simplement a garder en argument la liste des étiquettes qu'il y a après nous dans le parcours,
+en effet l'ordre est: racine :: Sous arbre gauche :: Sous arbre droit
+1) On appelle à droite avec la liste vide 
+2) On appelle à gauche avec la liste obtenue avec 1)
+3) On ajoute la racine 
+
+
+Exo3 : Reconstruire l'arbre binaire dont on donne la liste des étiquettes (dont les noeuds internes sont distingués, cela permet d'avoir unicité) lues dans l'ordre infixe 
+Solution : On vas s'inspirer de la construction de l'ordre infixe :  Sous arbre gauche :: racine :: Sous arbre droit
+donc on veut "consommer" le sous arbre gauche (c'est à dire prendre les éléments de la liste jusqu'à arriver sur une feuille), prendre la racine , consommer le sous arbre droit , accoler tout ça
+(On utilise une pile pour stocker les étiquettes mais on pourrait prendre une liste quitte à renvoyer aussi la liste après consommation)
+
+let rec build sous_arbre_gauche pile = 
+| pile vide -> sous_arbre_gauche
+| pop pile = Feuille -> build Feuille (liste')
+| pop pile = Noeud -> sous_arbre_droit = build Vide liste' 
+                      build N(Noeud,sous_arbre_gauche, sous_arbre_droit) pile 
+
+               (* il faut bien comprendre que la pile à été modifiée par les appels réccursifs, elle est mutable *) 
