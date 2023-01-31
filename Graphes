@@ -13,7 +13,9 @@ Exo1 : Anoter les noeuds d'un arbre binaire par la taille du sous arbre dont ils
 Solution : Nos enfants se renvoient anotés et renvoient leur taille, ce qui permet de nous anoter nous même et de renvoyer notre taille
 
 
+
 Exo2 : Donner la liste des étiquettes d'un arbre binaire dans l'ordre préfixe 
+
 Solution : pour éviter d'avoir à concaténer des liste on a simplement a garder en argument la liste des étiquettes qu'il y a après nous dans le parcours,
 en effet l'ordre est: racine :: Sous arbre gauche :: Sous arbre droit
 1) On appelle à droite avec la liste vide 
@@ -21,7 +23,10 @@ en effet l'ordre est: racine :: Sous arbre gauche :: Sous arbre droit
 3) On ajoute la racine 
 
 
-Exo3 : Reconstruire l'arbre binaire dont on donne la liste des étiquettes (dont les noeuds internes sont distingués, cela permet d'avoir unicité) lues dans l'ordre infixe 
+
+Exo3 : Reconstruire l'arbre binaire dont on donne la liste des étiquettes (dont les noeuds internes sont distingués, 
+cela permet d'avoir unicité) lues dans l'ordre infixe (utile à comprendre pour la sérialisation des arbres, cf code de Huffman)
+
 Solution : On vas s'inspirer de la construction de l'ordre infixe :  Sous arbre gauche :: racine :: Sous arbre droit
 donc on veut "consommer" le sous arbre gauche (c'est à dire prendre les éléments de la liste jusqu'à arriver sur une feuille), prendre la racine , consommer le sous arbre droit , accoler tout ça
 (On utilise une pile pour stocker les étiquettes mais on pourrait prendre une liste quitte à renvoyer aussi la liste après consommation)
@@ -33,3 +38,16 @@ let rec build sous_arbre_gauche pile =
                       build N(Noeud,sous_arbre_gauche, sous_arbre_droit) pile 
 
 Rq : il faut bien comprendre que la pile à été modifiée par les appels réccursifs
+
+
+
+Exo4 : Trouver un algorithme tranformant un arbre d'arité quelconque en arbre binaire, et son algorithme réciproque 
+
+Solution : l'idée est de former un peigne droit , dont les noeuds sont la racine et ses fils, et à chacun des noeuds de ce peigne, on ajoute en fils gauche le sous arbre binarisé du fils en question
+
+
+
+Exo5 : Anoter les sommets d'un arbre binaire par leur numéro dans l'ordre du parcours en largeur 
+
+Solution : 
+
