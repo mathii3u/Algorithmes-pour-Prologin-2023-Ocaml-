@@ -3,8 +3,8 @@ I) Arbres
 1) Généralités 
 
 1.1) Méthode :
-Une bonne idée est souvent de renvoyer a l'aide d'une fonction auxilière une partie des calculs fait réccursivement sur les enfants d'un noeud 
-Applications : exo1 
+Une bonne idée est souvent de renvoyer à l'aide d'une fonction auxilière une partie des calculs fait réccursivement sur les enfants d'un noeud 
+Application : exo1 
 
 
 Exercices :
@@ -50,4 +50,20 @@ Solution : l'idée est de former un peigne droit , dont les noeuds sont la racin
 Exo5 : Anoter les sommets d'un arbre binaire par leur numéro dans l'ordre du parcours en largeur 
 
 Solution : 
+
+
+
+Exo 6 (théorique) : définir et trouver la valeur des nombres de catalans 
+
+Solution : 
+
+
+Exo 7 : donner une relation entre le nombre de noeuds internes et de feuilles d'un arbre k-aire 
+
+Solution : 
+n=1 : f = k*1 
+n=2 : l'une des feuilles est remplacée par un noeud interne et k feuilles en dessous : k-1 + k = f
+n=3 : pareil : k-1 + k-1 + k = f 
+on peut donc prévoir une formule du style f = k + (n-1)*(k-1) = = n*(k-1) +1 (on remarque que ça fonctionne bien pour k = 2)
+
 
