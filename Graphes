@@ -73,5 +73,10 @@ on peut donc prévoir une formule du style f = k + (n-1)*(k-1) = = n*(k-1) +1 (o
 Preuve : on compte de deux façons le nombre d'arrêtes , une fois par le nombre de noeuds qui sont extrémité gauche (n*k), une fois par le nombre d'arrêtes extrémité droite (n +f -1)
 
 
+2) Arbres Rouge-Noir 
 
+2.1) Le principe :
+- Objectif : avoir une structure de donnée qui donne, l'insertion, la suppression et la recherche d'un élément en log(n)
+- le pincipe : 
+Ce que l'on décrit est possible pour des arbres équilibrés, c'est à dire dont la hauteur est proche de log(n)
 
