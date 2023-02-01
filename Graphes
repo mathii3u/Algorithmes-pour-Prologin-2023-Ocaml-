@@ -78,5 +78,18 @@ Preuve : on compte de deux façons le nombre d'arrêtes , une fois par le nombre
 2.1) Le principe :
 - Objectif : avoir une structure de donnée qui donne, l'insertion, la suppression et la recherche d'un élément en log(n)
 - le pincipe : 
-Ce que l'on décrit est possible pour des arbres équilibrés, c'est à dire dont la hauteur est proche de log(n)
+Ce que l'on décrit est possible pour des arbres équilibrés, c'est à dire dont la hauteur est proche de log(n).
+On vas maintenir des invariants pouvant garantir cette propriété, pour cela on colorie les noeuds en 2 couleurs de sorte que :
+- un noeud rouge n'as jamais de fils rouge 
+- tout les chemins de la racine à un noeud vide contient le même nombre de noeuds noirs 
+
+2.2) Insertion :
+1) On insère un noeud rouge tout en bas 
+2) après chaque appel réccursif on corrige par une rotation les violations d'invariant (le probleme en question est toujours un double noeud rouge)
+3) on colorie en noir la racine pour être sur de vérifier la première propriété 
+
+2.3) Suppression 
+
+
+
 
