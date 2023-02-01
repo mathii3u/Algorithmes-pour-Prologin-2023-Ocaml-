@@ -49,13 +49,18 @@ Solution : l'idée est de former un peigne droit , dont les noeuds sont la racin
 
 Exo5 : Anoter les sommets d'un arbre binaire par leur numéro dans l'ordre du parcours en largeur 
 
-Solution : 
+Solution : cf le fichier exo5.ml
 
 
 
 Exo 6 (théorique) : définir et trouver la valeur des nombres de catalans 
 
-Solution : 
+Solution : nombre de mots bien parenthèsés, ou alors le nombre d'arbre binaire non étiquettés à n noeuds internes
+1) on a une relation donnée par une somme, se trouve en distinguant les cas sur la taille du sous arbre gauche et droit 
+2) on veut une formule liant cn et cn+1 , pour cela on prend un arbre à n+1 sommets, et on lui retire une feuille et le noeud interne auquel elle est liée (disons que c'était son fils gauche), alors en remontant le fils droit , on obtient
+un arbre binaire à n noeuds internes, on à clairement une application réciproque, en se souvenant où est le noeud remonté et si c'était un fils gauche ou droit 
+ce qui fournit cn+1*(n+1) = 2*(2n+1)*cn , en développant un peu on se rend compte que l'on peut compléter le factoriel et obtenir
+cn = 1/(n+1) * n parmis 2n
 
 
 Exo 7 : donner une relation entre le nombre de noeuds internes et de feuilles d'un arbre k-aire 
